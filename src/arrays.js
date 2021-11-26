@@ -15,7 +15,10 @@ const arrayToCSVString = array => {
 };
 
 const csvStringToArray = string => {
-  // your code here
+  let array = string.split('');
+  const newArray = array.filter(element => element !== ",");
+  console.log(newArray);
+  return newArray;
 };
 
 const addToArray = (element, array) => {
@@ -106,7 +109,11 @@ const removeSpaces = string => {
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let total = 0;
+  for (i=0; i< numbers.length; i++) {
+    total += numbers[i];
+  }
+  return total;
 };
 
 const sortByLastLetter = strings => {
