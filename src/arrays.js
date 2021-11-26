@@ -23,14 +23,13 @@ const addToArray = (element, array) => {
 };
 
 const addToArray2 = (element, array) => {
-  const newArray = array;
-  let x = newArray.push(element);
+  let newArray = array.concat(element);
+  return newArray;
 }
 
 const removeNthElement = (index, array) => {
-  let array2=array.splice(index, 1);
-
-
+  array.splice(index, 1);
+  return array;
 };
 
 const numbersToStrings = numbers => {
@@ -65,7 +64,6 @@ const onlyEven = numbers => {
   let newArray=[];
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i]%2 === 0) {
-      console.log(i, numbers[i]);
       newArray.push(numbers[i]);
     };
   }
@@ -74,9 +72,13 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  let newArray = array.slice(index);
-  console.log(array, newArray);
-  return array;
+  let newArray = [];
+  for (let i =0; i<array.length; i++) {
+    if(i !== index) {
+      newArray.push(array[i]);
+    }
+  } 
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
