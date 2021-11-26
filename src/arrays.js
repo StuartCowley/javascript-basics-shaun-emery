@@ -117,7 +117,16 @@ const sumNumbers = numbers => {
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+    strings.sort (function (a, b) {
+      if (a[a.length -1] < b[b.length -1]){
+      return -1;
+      }
+      if (a[a.length -1] > b[b.length -1]){
+      return 1;
+      }
+    });
+    console.log(strings);
+    return strings;
 };
 
 module.exports = {
