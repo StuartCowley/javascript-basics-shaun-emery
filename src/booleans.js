@@ -63,16 +63,18 @@ function startsWith(char, string) {
 };
 
 function containsVowels(string) {
-  let string2 = string.toLowerCase();
-  let value = false
-  for (let i=0; i<string2.length; i++) {
-    if (string2[i] === "a" || string2[i] === "e" ||
-    string2[i] === "i" || string2[i] === "o" || string2[i] === "u") {
-      value = true;
-    } 
-    
-  }
-  return value;
+  //let string2 = string.toLowerCase();
+  //let value = false
+  //for (let i=0; i<string2.length; i++) {
+  //  if (string2[i] === "a" || string2[i] === "e" ||
+   // string2[i] === "i" || string2[i] === "o" || string2[i] === "u") {
+   //   value = true;
+  //  } 
+  //  
+ // }
+  //return value;
+  return string.split("").some(letter => ["a","e","i", "o","u"].includes
+  (letter.toLowerCase()));
 };
 
 function isLowerCase(string) {

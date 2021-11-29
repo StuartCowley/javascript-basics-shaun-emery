@@ -1,4 +1,4 @@
-function sayHello (string) {
+cd function sayHello (string) {
   return 'Hello, ' + string + '!';
  
   
