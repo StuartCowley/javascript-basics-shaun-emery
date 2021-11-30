@@ -78,13 +78,13 @@ const onlyEven = numbers => numbers.filter(number => number % 2 === 0)
 ;
 
 const removeNthElement2 = (index, array) => {
-  //let newArray = [];
-  //for (let i =0; i<array.length; i++) {
-   // if(i !== index) {
-   //   newArray.push(array[i]);
-  //  }
- // } 
-  //return newArray;
+  let newArray = [];
+  for (let i =0; i<array.length; i++) {
+   if(i !== index) {
+     newArray.push(array[i]);
+    }
+  } 
+  return newArray;
 };
 
 const elementsStartingWithAVowel = strings => {
