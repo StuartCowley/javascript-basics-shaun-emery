@@ -1,41 +1,79 @@
 const createPerson = (name, age) => {
-  // your code here
+  const person = {
+  name: name,  
+  age: age
+  }
+  return person;
 };
 
 const getName = object => {
-  // your code here
+  return object["name"];
 };
 
 const getProperty = (property, object) => {
-  // your code here
+  return object[property];
 };
 
 const hasProperty = (property, object) => {
-  // your code here
+  return object.hasOwnProperty(property);
 };
 
 const isOver65 = person => {
-  // your code here
+  return person.age>65;
 };
 
-const getAges = people => {
-  // your code here
-};
+const getAges = people => people.map(person => person.age)
+  // let newArray=[]; //
+  // for (i=0; i<people.length; i++) {
+  //newArray.push(people[i].age)}
+  //return newArray; 
 
-const findByName = (name, people) => {
-  // your code here
-};
+;
 
-const findHondas = cars => {
-  // your code here
-};
+const findByName = (name, people) => people.find(person => person.name === name)
+  //for (let i =0; i < people.length; i++) {
+  //  if(people[i].name === name) {
+  //    return people[i];
+  //  }
+  //}
+;
+
+const findHondas = cars => cars.filter(obj => obj.manufacturer === "Honda")
+  //let newArray=[];
+  //for (let i = 0; i < cars.length; i++){
+   // if (cars[i].manufacturer === "Honda"){
+  //    newArray.push(cars[i]);
+   // }
+  //}
+  //return newArray;
+;
 
 const averageAge = people => {
-  // your code here
+  //let ageTotal=0;
+  //for (let i = 0; i<people.length; i++){
+  //  ageTotal += people[i].age;
+  //}
+  // return ageTotal/people.length;
+  const totalAge= people.reduce((prevAge, currentAge) => {
+    return prevAge + currentAge.currentAge}, 0);
+    return totalAge/people.length;
 };
 
 const createTalkingPerson = (name, age) => {
-  // your code here
+  // Hi Fred, my name is Bill and I am 40!'
+  
+  const person = {
+    name: name,
+    age: age,
+    introduce: function() {
+      const speech = `Hi Fred, my name is ${name} and I am ${age}!`;
+      return speech;
+    }
+  }
+
+  return person;
+ 
+  
 };
 
 module.exports = {
